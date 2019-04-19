@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form#upload-form(action='/', method='POST', enctype='multipart/form-data')
+    h2 Select an image to upload:
+    .upload-container
+      input#file-picker(type='file', name='image')
+    div
+      input(type='submit', value='Upload Image')
+
